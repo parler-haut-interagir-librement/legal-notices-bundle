@@ -4,6 +4,30 @@ All notable changes to `phil/legal-notices-bundle` will be documented in this fi
 
 Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com/) principles.
 
+## 0.1.1-alpha - 2026-11-25
+
+### Changed
+
+- The development requirements accept `phil/markup` 0.3 and `phil/privacy-bundle` 0.3, the minor versions of their main
+  branches and no earlier one, so that the package installs on its own beside those packages.
+- Requires the latest minor of each dependency (`twig/twig` 3.31, `symfony/ux-twig-component` 3.8,
+  `symfony/translation-contracts` 3.8, `twig/intl-extra` 3.31), and of each development requirement
+  (`symfony/ux-toolkit` 3.8, `twig/extra-bundle` 3.31, `twig/html-extra` 3.31).
+- The development requirements take `twig/html-extra` 3.31.1 or later, which fixes the advisories of its sandbox
+  published on 2026-11-24.
+
+### Fixed
+
+- An application with TwigExtraBundle and its intl part enabled no longer fails with "Unable to register extension
+  IntlExtension as it is already registered": the bundle registers its extension of twig/intl-extra, and the compiler
+  pass `IntlExtensionPass` removes it when another Twig extension of that class is registered, before TwigBundle adds
+  the extensions to Twig. The check of `twig_extra` among the extensions, which never saw it while the bundle loaded,
+  is gone.
+
+### Security
+
+- Requires `twig/twig` 3.31.1 or later, which fixes the advisories of its sandbox published on 2026-11-24.
+
 ## 0.1.0-alpha - 2026-11-15
 
 ### Added

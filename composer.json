@@ -1,6 +1,6 @@
 {
     "name": "phil/legal-notices-bundle",
-    "description": "phil/legal-notices in Symfony: the legal notice and privacy policy at /legal and /privacy in each locale, every version at its own address, written in configuration or read from a source, rendered by phil/markup, with retention periods, consent categories, footer links, a check of what a document lacks and an event per version",
+    "description": "phil/legal-notices in Symfony: the legal notice and privacy policy at /legal and /privacy in each locale, every version at its own address, with footer links.",
     "license": "MIT",
     "type": "symfony-bundle",
     "keywords": [
@@ -32,14 +32,14 @@
         "symfony/http-foundation": "^8.2",
         "symfony/http-kernel": "^8.2",
         "symfony/routing": "^8.2",
-        "symfony/translation-contracts": "^3.6",
-        "symfony/ux-twig-component": "^3.7",
-        "twig/intl-extra": "^3.30",
-        "twig/twig": "^3.21"
+        "symfony/translation-contracts": "^3.8",
+        "symfony/ux-twig-component": "^3.8",
+        "twig/intl-extra": "^3.31",
+        "twig/twig": "^3.31.1"
     },
     "require-dev": {
-        "phil/markup": "^0.2.1@dev",
-        "phil/privacy-bundle": "^0.1@dev",
+        "phil/markup": "^0.3@dev",
+        "phil/privacy-bundle": "^0.3@dev",
         "phil/sitemap": "^0.1@dev",
         "phil/sitemap-bundle": "^0.1@dev",
         "phil/structured-data": "^0.1@dev",
@@ -54,10 +54,10 @@
         "symfony/translation": "^8.2",
         "symfony/twig-bridge": "^8.2",
         "symfony/twig-bundle": "^8.2",
-        "symfony/ux-toolkit": "^3.7.1",
+        "symfony/ux-toolkit": "^3.8",
         "symfony/yaml": "^8.2",
-        "twig/extra-bundle": "^3.24",
-        "twig/html-extra": "^3.24"
+        "twig/extra-bundle": "^3.31",
+        "twig/html-extra": "^3.31.1"
     },
     "suggest": {
         "phil/markup": "For bodies written in Markdown, UJO (Universal JSON Output), HTML and the other formats it reads",
